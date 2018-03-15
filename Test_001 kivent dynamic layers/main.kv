@@ -1,0 +1,52 @@
+#: kivy 1.9.0
+#: import SHADER_POS __main__.SHADER_POS
+#: import SHADER_POSROT __main__.SHADER_POSROT
+    
+<TestGame>:
+    gameworld: gameworld
+    GameWorld:
+        id: gameworld
+        gamescreenmanager: gamescreenmanager
+        size_of_gameworld: 100*1024
+        size_of_entity_block: 128
+        system_count: 5
+        zones: {'general': 10000}
+        PositionSystem2D:
+            system_id: 'position'
+            gameworld: gameworld
+            zones: ['general']
+            size_of_component_block: 128
+        RotateSystem2D:
+            system_id: 'rotate'
+            gameworld: gameworld
+            zones: ['general']
+        CymunkPhysics:
+            system_id: 'physics'
+            system_names: ['physics','position','rotate']
+            gameworld: gameworld
+            zones: ['general']
+        GameView:
+            system_id: "camera"
+            gameworld: gameworld
+            size: root.size
+            pos: root.pos
+            do_scroll_lock: True
+            window_size: root.size
+            updateable: True
+        RotateRenderer:
+            system_id: 'layer01'
+            gameworld: gameworld
+            zones: ['general']
+            system_names: ['layer01','position','rotate']
+            frame_count: 1
+            size_of_batches: 4
+            size_of_component_block: 1
+            shader_source: SHADER_POSROT
+            gameview: 'camera'
+    GameScreenManager:
+        id: gamescreenmanager
+        size: root.size
+        pos: root.pos
+        gameworld: gameworld
+        GameScreen:
+            name: 'main'

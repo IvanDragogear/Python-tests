@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="20" tileheight="20" nextobjectid="1">
+ <tileset firstgid="1" name="tileset_001" tilewidth="20" tileheight="20" tilecount="48">
+  <image source="../../images/tileset_001.png" width="160" height="120"/>
+ </tileset>
+ <layer name="Capa de Patrones 1" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjZmBgYAFiZirR3EDMQ0WaWu4add+o+0bdN+q+UfdR130Awy0LuQ==
+  </data>
+ </layer>
+ <layer name="Capa de patrones 2" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzjZ2Bg4KcyFqcShpmnDsTKQKzCQDqA6VNHM08biHXIMA+mD908SsGoefQzj5i0RIp5xKSl4RR+w9G8wVy+ULs8pSYGAAKXD6c=
+  </data>
+ </layer>
+</map>
