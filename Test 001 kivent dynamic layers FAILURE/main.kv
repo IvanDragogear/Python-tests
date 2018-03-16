@@ -9,7 +9,7 @@
         gamescreenmanager: gamescreenmanager
         size_of_gameworld: 100*1024
         size_of_entity_block: 128
-        system_count: 5
+        system_count: 16
         zones: {'general': 10000}
         PositionSystem2D:
             system_id: 'position'
@@ -25,16 +25,23 @@
             system_names: ['physics','position','rotate']
             gameworld: gameworld
             zones: ['general']
+        PlayerSystem:
+            system_id: 'playersys'
+            gameworld: gameworld
+            zones: ['general']
+            do_componet: False
+            updateable: True
+            game: root
         GameView:
             system_id: "camera"
             gameworld: gameworld
             size: root.size
             pos: root.pos
-            do_scroll_lock: True
+            do_scroll: False
             window_size: root.size
             updateable: True
         RotateRenderer:
-            system_id: 'layer01'
+            system_id: 'layer_test'
             gameworld: gameworld
             zones: ['general']
             system_names: ['layer01','position','rotate']
