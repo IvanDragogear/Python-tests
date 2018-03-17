@@ -8,4 +8,5 @@ depending on its position on the axis_y.
 Preview image
 -------------
 
-.. |coverage| image:: 
+![alt text](https://github.com/IvanDragogear/Python-tests/blob/master/preview%20images/test001.gif)
+
